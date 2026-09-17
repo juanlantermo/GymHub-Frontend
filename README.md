@@ -1,89 +1,110 @@
-# GimApp - Gestión de Gimnasio
+# 🏋️ GymHub - Frontend
 
-GimApp es una aplicación web para la gestión de socios, rutinas y ejercicios de un gimnasio. Permite a los usuarios gestionar su cuenta, ver rutinas asginadas, y a los administradores gestionar socios, rutinas y ejercicios.
+Frontend de **GymHub**, una aplicación web desarrollada como proyecto final de la **Tecnicatura Universitaria en Programación - UTN**.
 
-## Tecnologías
+GymHub permite gestionar usuarios, rutinas y ejercicios de un gimnasio mediante diferentes roles y permisos.
 
-- **Frontend:** React, React Bootstrap, React Router, Vite
+## 🎓 Sobre el proyecto
 
-## Instalación
+GymHub fue desarrollado como proyecto académico grupal por:
 
-1. Clonar el repositorio
+- Matías Gomez
+- Juan Manuel Lantermo
+- Juan Pablo Fernandez
+- Santiago Oller
 
-```sh
-git clone https://github.com/mattigomez/tpi-gimApp.git
-```
+El proyecto está dividido en un frontend desarrollado con React y una API REST desarrollada con .NET.
 
-2. Instalar dependencias
+## 🚀 Tecnologías
 
-```sh
-npm install
-```
+- React
+- Vite
+- React Router
+- React Bootstrap
+- JavaScript
+- JWT para autenticación
+- Context API
 
-3. Iniciar la aplicación
+## ✨ Funcionalidades
 
-```sh
-npm run dev
-```
+La interfaz permite, según el rol del usuario:
 
+- Iniciar sesión.
+- Acceder a rutas protegidas.
+- Consultar y gestionar el perfil.
+- Visualizar rutinas asignadas.
+- Crear y administrar rutinas.
+- Gestionar ejercicios.
+- Gestionar usuarios.
+- Diferenciar funcionalidades según los roles Administrador, Profesor y Cliente.
 
-## Estructura del proyecto (Frontend)
+## 🔐 Autenticación
 
-```
+El frontend utiliza autenticación mediante **JWT**.
+
+El token recibido desde la API permite identificar al usuario y su rol, controlar el acceso a rutas protegidas y realizar solicitudes autenticadas al backend.
+
+## 📁 Estructura del proyecto
+
+```text
 src/
 │   App.jsx
 │   index.css
 │   main.jsx
 │
 ├── assets/
-│   └── logowhite-GYMHUB.png
-│
 ├── components/
 │   ├── account/
-│   │   └── Account.jsx
 │   ├── auth/
-│   │   ├── auth.services.js
-│   │   └── login/
-│   │       ├── login.css
-│   │       └── Login.jsx
 │   ├── dashboard/
-│   │   └── Dashboard.jsx
 │   ├── header/
-│   │   └── Header.jsx
 │   ├── home/
-│   │   └── Home.jsx
 │   ├── newRoutine/
-│   │   └── NewRoutine.jsx
 │   ├── partners/
-│   │   └── Partners.jsx
 │   ├── routes/
-│   │   ├── notFound/
-│   │   │   └── NotFound.jsx
-│   │   └── protected/
-│   │       └── Protected.jsx
 │   ├── routineItem/
-│   │   ├── routineItem.css
-│   │   └── RoutineItem.jsx
 │   ├── routines/
-│   │   └── Routines.jsx
 │   └── toggleTheme/
-│       └── ToggleTheme.jsx
 │
 └── services/
     ├── authFetch.js
     ├── jwtDecode.js
     ├── authContext/
-    │   ├── Auth.context.jsx
-    │   └── AuthContextProvider.jsx
     └── theme/
-        ├── theme.context.jsx
-        ├── ThemeContextProvider.consts.js
-        └── ThemeContextProvider.jsx
 ```
 
-## Integrantes
+## ⚙️ Instalación
 
-- Matias Gomez
-- Juan Manuel Lantermo
-- Juan Pablo Fernandez
-- Santiago Oller
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/juanlantermo/GymHub-Frontend.git
+```
+
+### 2. Entrar al proyecto
+
+```bash
+cd GymHub-Frontend
+```
+
+### 3. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 4. Iniciar la aplicación
+
+```bash
+npm run dev
+```
+
+## 🔗 Backend
+
+La API REST utilizada por GymHub se encuentra en un repositorio separado:
+
+👉 [GymHub-Backend](https://github.com/juanlantermo/GymHub-Backend)
+
+El backend fue desarrollado con **.NET 8, ASP.NET Core, Entity Framework Core y SQL Server/Azure SQL**.
+
+> El entorno de Azure utilizado para la presentación académica actualmente no se encuentra activo.
